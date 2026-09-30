@@ -1,0 +1,805 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #101015;
+
+    border-bottom: 1px solid #24242c;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    color: #b7b7c2;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+.botao-nav {
+    background: #e63946;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-nav:hover {
+    background: #c92f3b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 80px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(230, 57, 70, 0.12),
+            transparent 35%
+        ),
+        #0b0b0f;
+}
+
+.hero-conteudo {
+    max-width: 650px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 5px;
+
+    background: rgba(230, 57, 70, 0.12);
+
+    color: #e63946;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e63946;
+}
+
+.hero p {
+    max-width: 560px;
+
+    color: #a5a5b0;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.botao-principal {
+    display: inline-block;
+
+    background: #e63946;
+
+    padding: 14px 23px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background: #c92f3b;
+
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    display: inline-block;
+
+    border: 1px solid #383841;
+
+    padding: 14px 23px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    color: #dddddf;
+
+    transition: 0.3s;
+}
+
+.botao-secundario:hover {
+    border-color: #e63946;
+    color: #e63946;
+}
+
+
+/* =========================
+   HERO IMAGEM
+========================= */
+
+.hero-imagem {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-destaque {
+    width: 420px;
+    height: 420px;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 150px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1d1d25,
+            #111116
+        );
+
+    border: 1px solid #292932;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5);
+
+    transform: rotate(3deg);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    padding: 100px 7%;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.titulo-secao span {
+    color: #e63946;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    font-size: 38px;
+
+    margin-top: 8px;
+
+    letter-spacing: -1px;
+}
+
+.titulo-secao p {
+    color: #85858f;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categorias {
+    background: #101015;
+}
+
+.categorias-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.categoria {
+    background: #17171e;
+
+    border: 1px solid #27272f;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.categoria:hover {
+    border-color: #e63946;
+
+    transform: translateY(-5px);
+}
+
+.categoria-icone {
+    font-size: 35px;
+
+    margin-bottom: 18px;
+}
+
+.categoria h3 {
+    margin-bottom: 5px;
+}
+
+.categoria p {
+    color: #777783;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+    background: #0b0b0f;
+}
+
+.produtos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.produto {
+    background: #15151b;
+
+    border: 1px solid #27272f;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+
+    border-color: #3b3b45;
+}
+
+.produto-imagem {
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #202027;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.produto:hover .produto-imagem img {
+    transform: scale(1.05);
+}
+
+.estado {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    background: #e63946;
+
+    color: #ffffff;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.produto-info {
+    padding: 22px;
+}
+
+.plataforma {
+    color: #e63946;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.produto h3 {
+    font-size: 21px;
+
+    margin: 7px 0;
+}
+
+.produto-info p {
+    color: #85858f;
+
+    font-size: 13px;
+
+    min-height: 63px;
+}
+
+.produto-final {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.produto-final strong {
+    font-size: 18px;
+}
+
+.botao-produto {
+    background: #24242c;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.botao-produto:hover {
+    background: #e63946;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    background: #101015;
+}
+
+.sobre-conteudo > span {
+    color: #e63946;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.sobre h2 {
+    font-size: 45px;
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    margin: 15px 0 25px;
+}
+
+.sobre p {
+    color: #92929c;
+
+    margin-bottom: 15px;
+
+    max-width: 600px;
+}
+
+.estatisticas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.estatistica {
+    padding: 25px;
+
+    background: #17171e;
+
+    border: 1px solid #27272f;
+
+    border-radius: 10px;
+}
+
+.estatistica strong {
+    display: block;
+
+    color: #e63946;
+
+    font-size: 30px;
+}
+
+.estatistica span {
+    display: block;
+
+    color: #8b8b95;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+.como-funciona {
+    background: #0b0b0f;
+}
+
+.passos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.passo {
+    padding: 30px;
+
+    background: #15151b;
+
+    border: 1px solid #27272f;
+
+    border-radius: 12px;
+}
+
+.numero {
+    color: #e63946;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.passo h3 {
+    margin-bottom: 10px;
+}
+
+.passo p {
+    color: #85858f;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    margin: 0 7%;
+
+    padding: 60px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #1b1b23,
+            #111116
+        );
+
+    border: 1px solid #292932;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.contato span {
+    color: #e63946;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.contato h2 {
+    font-size: 32px;
+
+    margin: 8px 0;
+}
+
+.contato p {
+    color: #85858f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 100px;
+
+    padding: 50px 7%;
+
+    border-top: 1px solid #24242c;
+
+    background: #08080b;
+
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: #e63946;
+}
+
+footer > p {
+    color: #777783;
+
+    margin-top: 8px;
+}
+
+.copyright {
+    font-size: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .menu {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-conteudo {
+        margin: auto;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .botao-nav {
+        display: none;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+    }
+
+    .hero-imagem {
+        margin-top: 20px;
+    }
+
+    .imagem-destaque {
+        width: 280px;
+        height: 280px;
+
+        font-size: 100px;
+    }
+
+    .categorias-grid,
+    .produtos-grid,
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+    .estatisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .contato {
+        margin: 0 5%;
+
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contato h2 {
+        font-size: 27px;
+    }
+
+}
